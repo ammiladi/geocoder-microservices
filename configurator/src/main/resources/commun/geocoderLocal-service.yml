@@ -1,0 +1,25 @@
+server:
+  port: 9001
+  contextPath: /geocoderLocal
+ 
+spring :  
+  data:
+    mongodb:
+      host: 10.150.204.105
+      username: user
+      password: pwd
+      database: test
+      port: 27017
+  
+--  autoconfigure:
+--    exclude: org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+ 
+security:
+  oauth2:
+    client:
+      clientId: geocoderLocal-service
+      clientSecret: geocoderLocal-pwd
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+  

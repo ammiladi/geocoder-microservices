@@ -1,0 +1,22 @@
+server:
+  port: 9002
+  contextPath: /geocoderRemote
+ 
+spring :  
+  data:
+    mongodb:
+      host: mongodb
+      username: user
+      password: pwd
+      database: geocodageDatabase
+      port: 27017
+ 
+security:
+  oauth2:
+    client:
+      clientId: geocoderLocal-service
+      clientSecret: pwd1
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+  

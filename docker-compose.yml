@@ -1,0 +1,22 @@
+version: '2'
+services:
+  configurator:
+    build: configurator
+    ports:
+      - 8888:8888
+      
+  eureka-discovery:
+    build: eureka-discovery
+
+  zuul-gateway:
+    build: zuul-gateway
+    
+  auth-service:
+    build: auth-service
+    ports:
+      - 5000:5000
+      
+  mongodb:
+    build: mongodb
+    ports:
+      - 25000:27017 

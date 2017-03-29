@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: hystrix-dashboard
+  cloud:
+    config:
+      uri: http://configurator:8888
+      fail-fast: true
+info:
+  component: Hystrix Dashboard
+  
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+server:
+  port: 7979
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+
+eureka:
+  client:
+    region: default
+    preferSameZone: false
+    us-east-1:
+      availabilityZones: default
+
+  instance:
+    virtualHostName: ${spring.application.name}

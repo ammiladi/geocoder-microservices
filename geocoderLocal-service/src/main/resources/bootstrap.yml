@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: geocoderLocal-service
+  cloud:
+    config:
+      uri: http://configurator:8888
+      fail-fast: true
+      
+ 

@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      host: mongodb
+      username: user
+      password: pwd
+      database: auth
+      port: 27017
+
+server:
+  context-path: /uaa
+  port: 5000

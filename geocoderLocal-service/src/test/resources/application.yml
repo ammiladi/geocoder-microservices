@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: testGeocoderLocal
+      port: 0
