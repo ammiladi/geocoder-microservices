@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,8 +23,8 @@ public class UserController {
 	private UserService userService;
 
 	@RequestMapping(value = "/current", method = RequestMethod.GET)
-	public Principal getUser(Principal principal) {
-		return principal;
+	public User getUser(Principal principal) {
+		return   ((User)((OAuth2Authentication) principal).getUserAuthentication().getPrincipal());
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
