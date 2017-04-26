@@ -1,0 +1,44 @@
+﻿ 
+<div class="pos-f-t">
+    <app-navigationbar></app-navigationbar>
+</div>
+<div class="container">
+<form [formGroup]="adresseForm" (ngSubmit)="processGeocoder($event)">
+	<div class="form-group row"> <!-- Name field -->
+		<label class="col-sm-2 col-form-label" for="adress">Adress:</label>
+        <div class="col-sm-4">
+		  <input class="form-control" id="adress" name="adress" type="text"/>
+        </div>
+	</div>
+	
+	<div class="form-group row"> 
+		<label class="col-sm-2 col-form-label"  for="city">City:</label>
+        <div class="col-sm-4">
+		  <input class="form-control" id="city" name="city" type="text"/>
+        </div>
+	</div>
+
+    <div class="form-group row">  
+		<label class="col-sm-2 col-form-label"  for="postalCode">Postal code:</label>
+		<div class="col-sm-4">
+          <input class="form-control" id="postalCode" name="postalCode" type="text"/>
+        </div>
+	</div>
+
+    <div class="form-group row">  
+		<label class="col-sm-2 col-form-label"  for="country">Country:</label>
+		<div class="col-sm-4">
+          <input class="form-control" id="country" name="country" type="text"/>
+        </div>
+	</div>
+	
+	 
+	
+	<div class="form-group">
+		<button class="btn btn-primary " name="submit" type="submit">Geocoder</button>
+        <button class="btn btn-danger " name="submit"  >Clear</button>
+	</div>
+</form>		
+</div>
+
+ 

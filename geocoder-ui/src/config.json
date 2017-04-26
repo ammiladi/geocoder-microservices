@@ -1,0 +1,29 @@
+﻿  {
+   "oauth2GeocoderProvider":{
+     "authEndpoint": "http://localhost:5000/uaa/oauth/token",
+     "userInfoUrl": "http://localhost:5000/uaa/users/current",
+     "clientId":"browser",
+     "callbackUrl" : "http://localhost:4200/authentication",
+     "scopes" : "ui"
+   },
+   "linkedinProvider":{
+     "authEndpoint": "https://www.linkedin.com/oauth/v2/authorization",
+     "userInfoUrl": "https://www.linkedin.com/oauth/v2/authorization",
+     "clientId":"todo",
+     "callbackUrl" : ""
+   },
+   "facebookProvider":{
+     "authEndpoint": "https://www.facebook.com/v2.8/dialog/oauth",
+     "userInfoUrl": "https://www.facebook.com/plus/v1/people/me",
+     "clientId":"todo",
+     "callbackUrl" : ""
+   },
+   "googleProvider":{
+     "authEndpoint": "https://accounts.google.com/o/oauth2/auth",
+     "userInfoUrl": "https://www.googleapis.com/plus/v1/people/me",
+     "clientId":"746026748505-3qb1c074e4a1e23ppppap5atkrubcn2r.apps.googleusercontent.com",
+     "client_secret":"m_OBpF4m3j6thiczTwbg1mMa",
+     "callbackUrl" : "http://localhost:4200/authentication"
+   }
+   }
+
