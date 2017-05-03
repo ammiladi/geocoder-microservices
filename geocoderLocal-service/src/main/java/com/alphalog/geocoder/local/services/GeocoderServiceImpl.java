@@ -26,11 +26,12 @@ public class GeocoderServiceImpl implements GeocoderService{
 	public Optional<Address> getAdresseInfomation(Address address) {
 		Address AddressFound = addressRepository.findAddress(address);
 		if(AddressFound!=null){
-			return Optional.of( addressRepository.findAddress(AddressFound));
+			return Optional.of( AddressFound);
 		}
 		else{
 			Map<String, String> param = new HashMap<>(); param.put("address", address.toString());
 			@SuppressWarnings("unchecked")
+			//FIXME
 			Map<String,String> coord = ( new RestTemplate()).getForObject("http://localhost:4000/geocoderRemote/geocoder?address="+address, Map.class, address);
 			address.setLatitude(coord.get("lat"));
 			address.setLongitude(coord.get("lng"));
