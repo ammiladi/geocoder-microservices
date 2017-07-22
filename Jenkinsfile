@@ -1,15 +1,7 @@
 
 def pipeline
-
  
-
-def imgVersion = IMG_VERSION
-
-def forceDeployFO = FORCE_DEPLOY_FO == "true"
-def forceDeployBO = FORCE_DEPLOY_BO == "true"
-
-def createTag = CREATE_TAG == "true"
-
+ 
 // Build des composants
 node {
 
