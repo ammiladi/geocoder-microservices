@@ -23,7 +23,8 @@ node {
 				            //def app = docker.build medamine123/hsbcrepo 
 				            //app.push 'latest'
         					//app.push version
-        					docker build "medamine123/hsbcrepo"
+        					sh "docker build -t medamine123/hsbcrepo:1.0.0  -f Dockerfile ./zuul-gateway"
+        					sh "docker push medamine123/hsbcrepo:1.0.0"
 				        }
             }
             //}
