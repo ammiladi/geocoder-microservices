@@ -20,7 +20,7 @@ node {
          //  withEnv(["PATH+docker=${tool 'docker'}"]) {    
 				withDockerRegistry([credentialsId: 'docker', url: "https://hub.docker.com"]) {
 				            //sh "docker build medamine123/hsbcrepo zuul-gateway";
-				            def app = docker.build medamine123/hsbcrepo:1.0.0
+				            def app = docker.build medamine123/hsbcrepo 
 				            app.push 'latest'
         					//app.push version
 				        }
