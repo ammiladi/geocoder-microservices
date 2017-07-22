@@ -19,7 +19,10 @@ node {
      stage ('Docker Build') {  
          //  withEnv(["PATH+docker=${tool 'docker'}"]) {    
 				withDockerRegistry([credentialsId: 'docker', url: "https://hub.docker.com"]) {
-				            sh "docker.build(""medamine123/hsbcrepo"",""zuul-gateway"")";
+				            //sh "docker build medamine123/hsbcrepo zuul-gateway";
+				            def app = docker.build medamine123/hsbcrepo:1.0.0
+				            app.push 'latest'
+        					//app.push version
 				        }
             }
             //}
