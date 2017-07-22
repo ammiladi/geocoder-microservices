@@ -10,8 +10,8 @@ node {
         //pipeline = load 'pipeline.groovy'
         //pipeline.gitInitConf();
     }
-    stage ('Build') {      
-            withMaven(maven: 'maven35'){
+    stage ('Build') {  
+           withEnv(["PATH+MAVEN=${tool 'maven35'}/bin"]) {    
                        // Run the maven build
                        sh "mvn -Dmaven.test.skip=true clean package"
                 }
