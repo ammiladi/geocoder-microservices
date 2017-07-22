@@ -23,7 +23,7 @@ node {
                        // Run the maven build
                        sh "mvn -Dmaven.test.skip=true clean package"
                 }
-
+            }
  
 
  }
