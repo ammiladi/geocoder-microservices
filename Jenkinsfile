@@ -19,8 +19,7 @@ node {
      stage ('Docker Build') {  
            withEnv(["PATH+docker=${tool 'docker'}"]) {    
 				withDockerRegistry([credentialsId: 'docker', url: "https://hub.docker.com/	"]) {
-				            def img = docker.build("medamine123/hsbcrepo","zuul-gateway");
-				            //img.tag("latest");
+				            docker.build("medamine123/hsbcrepo","zuul-gateway");
 				        }
             }}
             
