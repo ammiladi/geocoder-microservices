@@ -23,7 +23,7 @@ node {
 				            //def app = docker.build medamine123/hsbcrepo 
 				            //app.push 'latest'
         					//app.push version
-        					docker build medamine123/hsbcrepo
+        					docker build "medamine123/hsbcrepo"
 				        }
             }
             //}
